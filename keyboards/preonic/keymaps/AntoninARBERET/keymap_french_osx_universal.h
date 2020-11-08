@@ -237,7 +237,7 @@
 #define FRM_PERM S(A(FRM_LUGR)) // ‰
 // Row 4
 #define FRM_GTEQ S(A(FRM_LABK)) // ≥
-#define FRM_LSAQ S(A(FRM_W))    // ›
+#define FRM_RSAQ S(A(FRM_W))    // ›
 #define FRM_FRSL S(A(FRM_X))    // ⁄
 #define FRM_CENT S(A(FRM_C))    // ¢
 #define FRM_SQRT S(A(FRM_V))    // √

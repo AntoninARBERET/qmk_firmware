@@ -36,15 +36,15 @@
 // Row 1
 #define FRW_SUP2 KC_GRV  // ²
 #define FRW_AMPR KC_1    // &
-#define FRW_EACU KC_2    // é
+#define FRW_LEAC KC_2    // é
 #define FRW_DQUO KC_3    // "
 #define FRW_QUOT KC_4    // '
 #define FRW_LPRN KC_5    // (
 #define FRW_MINS KC_6    // -
-#define FRW_EGRV KC_7    // è
+#define FRW_LEGR KC_7    // è
 #define FRW_UNDS KC_8    // _
-#define FRW_CCED KC_9    // ç
-#define FRW_AGRV KC_0    // à
+#define FRW_LCCE KC_9    // ç
+#define FRW_LAGR KC_0    // à
 #define FRW_RPRN KC_MINS // )
 #define FRW_EQL  KC_EQL  // =
 // Row 2
@@ -101,15 +101,15 @@
  */
 // Row 1
 #define FRW_1    S(FRW_AMPR) // 1
-#define FRW_2    S(FRW_EACU) // 2
+#define FRW_2    S(FRW_LEAC) // 2
 #define FRW_3    S(FRW_DQUO) // 3
 #define FRW_4    S(FRW_QUOT) // 4
 #define FRW_5    S(FRW_LPRN) // 5
 #define FRW_6    S(FRW_MINS) // 6
-#define FRW_7    S(FRW_EGRV) // 7
+#define FRW_7    S(FRW_LEGR) // 7
 #define FRW_8    S(FRW_UNDS) // 8
-#define FRW_9    S(FRW_CCED) // 9
-#define FRW_0    S(FRW_AGRV) // 0
+#define FRW_9    S(FRW_LCCE) // 9
+#define FRW_0    S(FRW_LAGR) // 0
 #define FRW_DEG  S(FRW_RPRN) // °
 #define FRW_PLUS S(FRW_EQL)  // +
 // Row 2
@@ -139,14 +139,14 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 // Row 1
-#define FRW_TILD ALGR(FRW_EACU) // ~ (dead)
+#define FRW_TILD ALGR(FRW_LEAC) // ~ (dead)
 #define FRW_HASH ALGR(FRW_DQUO) // #
 #define FRW_LCBR ALGR(FRW_QUOT) // {
 #define FRW_LBRC ALGR(FRW_LPRN) // [
 #define FRW_PIPE ALGR(FRW_MINS) // |
-#define FRW_GRV  ALGR(FRW_EGRV) // ` (dead)
+#define FRW_GRV  ALGR(FRW_LEGR) // ` (dead)
 #define FRW_BSLS ALGR(FRW_UNDS) // (backslash)
-#define FRW_AT   ALGR(FRW_AGRV) // @
+#define FRW_AT   ALGR(FRW_LAGR) // @
 #define FRW_RBRC ALGR(FRW_RPRN) // ]
 #define FRW_RCBR ALGR(FRW_EQL)  // }
 // Row 2
