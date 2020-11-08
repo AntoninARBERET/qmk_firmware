@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |   W  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   ;  |   :  | Enter|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Brite| Ctrl | Alt  | GUI  |Lower |    Space    |Raise | Left | Down |  Up  |Right |
+ * | Brite| Ctrl | Alt  | GUI  |Lower |    Space    |Raise |Alt Gr| Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
  */
 
@@ -58,16 +58,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,  FRM_A,    FRM_Z,    FRM_E,    FRM_R,    FRM_T,    FRM_Y,    FRM_U,    FRM_I,    FRM_O,    FRM_P,    KC_BSPC,  \
   KC_ESC,  FRM_Q,    FRM_S,    FRM_D,    FRM_F,    FRM_G,    FRM_H,    FRM_J,    FRM_K,    FRM_L,    FRM_M,    FRM_CIRC, \
   KC_LSFT, FRM_W,    FRM_X,    FRM_C,    FRM_V,    FRM_B,    FRM_N,    FRM_M,    FRM_COMM, FRM_SCLN,  FRM_COLN, KC_ENT,  \
-  BACKLIT, KC_LCTL, KC_LALT, KC_LGUI, LOWER_MAC,   KC_SPC,  KC_SPC,  RAISE_MAC,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT  \
+  BACKLIT, KC_LCTL, KC_LALT, KC_LGUI, LOWER_MAC,   KC_SPC,  KC_SPC,  RAISE_MAC,   KC_ALGR, KC_DOWN, KC_UP,   KC_RGHT  \
 ),
 
 // Windows & Linux
 [_AZERTY_WIN] = LAYOUT_preonic_grid( \
-  /*KC_NUBS*/FRW_W,   FRW_AMPR, FRW_LEAC, FRW_DQUO, FRW_QUOT, FRW_LPRN, FRW_LEGR, FRW_EXLM, FRW_LCCE, FRW_LAGR, FRW_RPRN, FRW_MINS, \
+  FRW_SUP2,   FRW_AMPR, FRW_LEAC, FRW_DQUO, FRW_QUOT, FRW_LPRN, FRW_LEGR, FRW_EXLM, FRW_LCCE, FRW_LAGR, FRW_RPRN, FRW_MINS, \
   KC_TAB,  FRW_A,    FRW_Z,    FRW_E,    FRW_R,    FRW_T,    FRW_Y,    FRW_U,    FRW_I,    FRW_O,    FRW_P,    KC_BSPC,  \
   KC_ESC,  FRW_Q,    FRW_S,    FRW_D,    FRW_F,    FRW_G,    FRW_H,    FRW_J,    FRW_K,    FRW_L,    FRW_M,    FRW_CIRC, \
   KC_LSFT, FRW_W,    FRW_X,    FRW_C,    FRW_V,    FRW_B,    FRW_N,    FRW_M,    FRW_COMM, FRW_SCLN,  FRW_COLN, KC_ENT,  \
-  BACKLIT, KC_LCTL, KC_LALT, KC_LGUI, LOWER_WIN,   KC_SPC,  KC_SPC,  RAISE_WIN,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT  \
+  BACKLIT, KC_LCTL, KC_LALT, KC_LGUI, LOWER_WIN,   KC_SPC,  KC_SPC,  RAISE_WIN,   KC_ALGR, KC_DOWN, KC_UP,   KC_RGHT  \
 ),
 
 
@@ -121,7 +121,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_RAISE_MAC] = LAYOUT_preonic_grid( \
   FRM_GRV,  FRM_1,    FRM_2,    FRM_3,    FRM_4,    FRM_5,    FRM_6,    FRM_7,    FRM_8,    FRM_9,    FRM_0,    KC_BSPC, \
   FRM_GRV, FRM_LAGR,  FRM_2,   FRM_LEGR,  FRM_4,    FRM_5,    FRM_6,    FRM_7,    FRM_8,    FRM_9,    FRM_0,    KC_DEL,  \
-  KC_DEL, _______, _______, _______, FRM_LCBR, AZERTY_WIN, _______,   FRM_RCBR, FRM_EQL,  FRM_LBRC, FRM_RBRC, FRM_BSLS, \
+  KC_DEL, _______, _______, _______, FRM_LCBR, _______, _______,   FRM_RCBR, FRM_EQL,  FRM_LBRC, FRM_RBRC, FRM_BSLS, \
   _______,_______, _______, _______, _______, _______, _______,  KC_NUHS, KC_NUBS, KC_PGUP, KC_PGDN, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY  \
 ),
@@ -130,7 +130,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_RAISE_WIN] = LAYOUT_preonic_grid( \
   FRW_GRV,  FRW_1,    FRW_2,    FRW_3,    FRW_4,    FRW_5,    FRW_6,    FRW_7,    FRW_8,    FRW_9,    FRW_0,    KC_BSPC, \
   FRW_GRV, FRW_LAGR,  FRW_2,   FRW_LEGR,  FRW_4,    FRW_5,    FRW_6,    FRW_7,    FRW_8,    FRW_9,    FRW_0,    KC_DEL,  \
-  KC_DEL, _______, _______, _______, FRW_LCBR, AZERTY_MAC, _______,   FRW_RCBR, FRW_EQL,  FRW_LBRC, FRW_RBRC, FRW_BSLS, \
+  KC_DEL, _______, _______, _______, FRW_LCBR, _______, _______,   FRW_RCBR, FRW_EQL,  FRW_LBRC, FRW_RBRC, FRW_BSLS, \
   _______,_______, _______, _______, _______, _______, _______,  KC_NUHS, KC_NUBS, KC_PGUP, KC_PGDN, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY  \
 ),
@@ -198,7 +198,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           return false;
           break;
         case RAISE_MAC:
-          uprintf("RAISE_MAC pressed \n");
           if (record->event.pressed) {
             layer_on(_RAISE_MAC);
             update_tri_layer(_LOWER_MAC, _RAISE_MAC, _ADJUST_MAC);
@@ -209,10 +208,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           return false;
           break;
         case AZERTY_WIN:
-          uprintf("AZERTY_WIN pressed\n");
           if (record->event.pressed) {
             #ifdef CONSOLE_ENABLE
-            uprintf("Set win layer KL: kc: %u\n", keycode);
             #endif
             set_single_persistent_default_layer(_AZERTY_WIN);
             user_config.macos = 0;
@@ -359,7 +356,7 @@ bool music_mask_user(uint16_t keycode) {
 void keyboard_post_init_user(void) {
   user_config.raw = eeconfig_read_user();
   // Debug
-  debug_enable=true;
+  //debug_enable=true;
   //debug_matrix=true;
   //debug_keyboard=true;
   //debug_mouse=true;

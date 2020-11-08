@@ -34,7 +34,7 @@
  * └─────┴────┴─────┴───────────────────────┴─────┴────┴─────┘
  */
 // Row 1
-#define FRM_AT   KC_GRV  // @
+#define FRM_AT   KC_NUBS  // @
 #define FRM_AMPR KC_1    // &
 #define FRM_LEAC KC_2    // é
 #define FRM_DQUO KC_3    // "
