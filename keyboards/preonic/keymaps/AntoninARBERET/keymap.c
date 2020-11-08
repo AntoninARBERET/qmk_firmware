@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |   W  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   ;  |   :  | Enter|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Brite| Ctrl | Alt  | GUI  |Lower |    Space    |Raise |Alt Gr| Down |  Up  |Right |
+ * | Ctrl | Brite| Alt  | GUI  |Lower |    Space    |Raise |Alt Gr| Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
  */
 
@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,  FRM_A,    FRM_Z,    FRM_E,    FRM_R,    FRM_T,    FRM_Y,    FRM_U,    FRM_I,    FRM_O,    FRM_P,    KC_BSPC,  \
   KC_ESC,  FRM_Q,    FRM_S,    FRM_D,    FRM_F,    FRM_G,    FRM_H,    FRM_J,    FRM_K,    FRM_L,    FRM_M,    FRM_CIRC, \
   KC_LSFT, FRM_W,    FRM_X,    FRM_C,    FRM_V,    FRM_B,    FRM_N,    FRM_M,    FRM_COMM, FRM_SCLN,  FRM_COLN, KC_ENT,  \
-  BACKLIT, KC_LCTL, KC_LALT, KC_LGUI, LOWER_MAC,   KC_SPC,  KC_SPC,  RAISE_MAC,   KC_ALGR, KC_DOWN, KC_UP,   KC_RGHT  \
+  KC_LCTL, BACKLIT, KC_LALT, KC_LGUI, LOWER_MAC,   KC_SPC,  KC_SPC,  RAISE_MAC,   KC_ALGR, KC_DOWN, KC_UP,   KC_RGHT  \
 ),
 
 // Windows & Linux
@@ -67,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,  FRW_A,    FRW_Z,    FRW_E,    FRW_R,    FRW_T,    FRW_Y,    FRW_U,    FRW_I,    FRW_O,    FRW_P,    KC_BSPC,  \
   KC_ESC,  FRW_Q,    FRW_S,    FRW_D,    FRW_F,    FRW_G,    FRW_H,    FRW_J,    FRW_K,    FRW_L,    FRW_M,    FRW_CIRC, \
   KC_LSFT, FRW_W,    FRW_X,    FRW_C,    FRW_V,    FRW_B,    FRW_N,    FRW_M,    FRW_COMM, FRW_SCLN,  FRW_COLN, KC_ENT,  \
-  BACKLIT, KC_LCTL, KC_LALT, KC_LGUI, LOWER_WIN,   KC_SPC,  KC_SPC,  RAISE_WIN,   KC_ALGR, KC_DOWN, KC_UP,   KC_RGHT  \
+  KC_LCTL, BACKLIT, KC_LALT, KC_LGUI, LOWER_WIN,   KC_SPC,  KC_SPC,  RAISE_WIN,   KC_ALGR, KC_DOWN, KC_UP,   KC_RGHT  \
 ),
 
 
