@@ -140,15 +140,13 @@
  */
 // Row 1
 #define FRW_TILD ALGR(FRW_LEAC) // ~ (dead)
-//#define FRW_HASH ALGR(FRW_DQUO) // #
+#define FRW_HASH ALGR(FRW_DQUO) // #
 #define FRW_LCBR ALGR(FRW_QUOT) // {
 #define FRW_LBRC ALGR(FRW_LPRN) // [
 #define FRW_PIPE ALGR(FRW_MINS) // |
 #define FRW_GRV  ALGR(FRW_LEGR) // ` (dead)
 #define FRW_BSLS ALGR(FRW_UNDS) // (backslash)
-//#define FRW_AT   ALGR(FRW_LAGR) // @
-#define FRW_AT KC_AT
-#define FRW_HASH S(FRW_AT)
+#define FRW_AT   ALGR(FRW_LAGR) // @
 #define FRW_RBRC ALGR(FRW_RPRN) // ]
 #define FRW_RCBR ALGR(FRW_EQL)  // }
 // Row 2
