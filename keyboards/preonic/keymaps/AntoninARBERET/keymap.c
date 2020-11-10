@@ -96,7 +96,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 //Windows & Linux
 [_LOWER_WIN] = LAYOUT_preonic_grid( \
-  FRW_TILD, _______, _______,  _______, _______,  _______, _______, _______, _______, FRM_AMPR, FRM_PIPE, KC_BSPC, \
+  FRW_TILD, _______, _______,  _______, _______,  _______, _______, _______, _______, FRM_AMPR, ALGR(S(KC_L)), KC_BSPC, \
   _______, _______, KC_UP,   FRW_LEAC, FRW_DLR,  _______, _______, _______, _______, FRM_PLUS, FRM_MINS, KC_DEL,  \
   KC_DEL,  KC_LEFT, KC_DOWN, KC_RIGHT,FRW_LPRN, _______, _______, FRW_RPRN, _______, FRM_ASTR, FRM_SLSH, FRM_PERC, \
   _______, KC_NUBS, _______, _______, _______, _______, _______,_______,_______, FRM_EXLM, FRM_EQL, _______, \
