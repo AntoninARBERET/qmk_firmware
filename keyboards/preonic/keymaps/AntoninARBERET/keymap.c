@@ -42,13 +42,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * |   @  |   &  |   é  |   "  |   '  |   (  |   è  |   !  |   ç  |   à  |   )  |   -  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |   A  |   Z  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Bkspc|
+ * | Tab  |   A  |   Z  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Bkspc|
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * | Del  |   Q  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   M  |  ^   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |   W  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   ;  |   :  | Enter|
+ * | Shift|   W  |   X  |   C  |   V  |   B  |   N  |   ,  |   ;  |   :  |  up  | Enter|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Ctrl | Brite|  GUI | Alt  |Lower |    Space    |Raise |Alt Gr|      |      |  Del |
+ * | Ctrl | Brite|  GUI | Alt  |Lower |    Space    |Raise |Alt Gr| left | down | right|
  * `-----------------------------------------------------------------------------------'
  */
 
@@ -57,8 +57,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_NUBS,   FRM_AMPR, FRM_LEAC, FRM_DQUO, FRM_QUOT, FRM_LPRN, FRM_SECT, FRM_LEGR, FRM_EXLM, FRM_LCCE, FRM_LAGR, FRM_MINS, \
   KC_TAB,  FRM_A,    FRM_Z,    FRM_E,    FRM_R,    FRM_T,    FRM_Y,    FRM_U,    FRM_I,    FRM_O,    FRM_P,    KC_BSPC,  \
   KC_ESC,  FRM_Q,    FRM_S,    FRM_D,    FRM_F,    FRM_G,    FRM_H,    FRM_J,    FRM_K,    FRM_L,    FRM_M,    FRM_CIRC, \
-  KC_LSFT, FRM_W,    FRM_X,    FRM_C,    FRM_V,    FRM_B,    FRM_N,    FRM_M,    FRM_COMM, FRM_SCLN,  FRM_COLN, KC_ENT,  \
-  KC_LCTL, BACKLIT, KC_LGUI, KC_LALT, LOWER_MAC,   KC_SPC,  KC_SPC,  RAISE_MAC,   KC_LGUI, _______, _______,   KC_DEL  \
+  KC_LSFT, FRM_W,    FRM_X,    FRM_C,    FRM_V,    FRM_B,    FRM_N,    FRM_COMM, FRM_SCLN,  FRM_COLN,  KC_UP,  KC_ENT,  \
+  KC_LCTL, BACKLIT,  KC_LALT, KC_LGUI, LOWER_MAC,   KC_SPC,  KC_SPC,  RAISE_MAC,   KC_LGUI, KC_LEFT, KC_DOWN,   KC_RIGHT  \
 ),
 
 // Windows & Linux
@@ -66,8 +66,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   FRW_SUP2,   FRM_AMPR, FRM_LEAC, FRM_DQUO, FRM_QUOT, FRM_LPRN, FRM_SECT, FRM_LEGR, FRM_EXLM, FRM_LCCE, FRM_LAGR, FRM_MINS, \
   KC_TAB,  FRW_A,    FRW_Z,    FRW_E,    FRW_R,    FRW_T,    FRW_Y,    FRW_U,    FRW_I,    FRW_O,    FRW_P,    KC_BSPC,  \
   KC_ESC,  FRW_Q,    FRW_S,    FRW_D,    FRW_F,    FRW_G,    FRW_H,    FRW_J,    FRW_K,    FRW_L,    FRW_M,    FRW_CIRC, \
-  KC_LSFT, FRW_W,    FRW_X,    FRW_C,    FRW_V,    FRW_B,    FRW_N,    FRW_M,    FRW_COMM, FRW_SCLN,  FRW_COLN, KC_ENT,  \
-  KC_LCTL, BACKLIT,  KC_LGUI, KC_LALT,  LOWER_WIN,   KC_SPC,  KC_SPC,  RAISE_WIN,   KC_ALGR, _______, _______,   KC_DEL  \
+  KC_LSFT, FRW_W,    FRW_X,    FRW_C,    FRW_V,    FRW_B,    FRW_N,    FRW_COMM, FRW_SCLN,  FRW_COLN, KC_UP,    KC_ENT,  \
+  KC_LCTL, BACKLIT,  KC_LGUI, KC_LALT,  LOWER_WIN,   KC_SPC,  KC_SPC,  RAISE_WIN,   KC_ALGR, KC_LEFT, KC_DOWN,   KC_RIGHT   \
 ),
 
 
@@ -79,9 +79,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * | Del  | left | down |right |   (  |      |      |   )  |      |   *  |   /  |   %  |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |      |      |   !  |   =  |      |
+ * |      |   <  |      |      |      |      |      |      |      |   !  |   =  |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |             |      | Next | Vol- | Vol+ | Play |
+ * | Ctrl |      |      | Alt  |      |             |      | Next | Vol- | Vol+ | Play |
  * `-----------------------------------------------------------------------------------'
  */
 
@@ -90,8 +90,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   FRM_TILD, _______, _______,   _______, _______,  _______, _______, _______, _______, FRM_AMPR, FRM_PIPE, KC_BSPC, \
   _______ , _______, KC_UP,   FRM_LEAC, FRM_DLR,  _______, _______, _______, _______, FRM_PLUS, FRM_MINS, KC_DEL,  \
   KC_DEL,  KC_LEFT, KC_DOWN, KC_RIGHT,FRM_LPRN, _______, _______, FRM_RPRN, _______, FRM_ASTR, FRM_SLSH, FRM_PERC, \
-  _______, _______, _______, _______, _______, _______, _______,_______,_______, FRM_EXLM, FRM_EQL, _______, \
-  _______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY \
+  _______, FRM_LABK, _______, _______, _______, _______, _______,_______,_______, FRM_EXLM, FRM_EQL, _______, \
+  KC_LCTL, _______, _______, KC_LALT, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY \
 ),
 
 //Windows & Linux
@@ -99,8 +99,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   FRW_TILD, _______, _______,  _______, _______,  _______, _______, _______, _______, FRM_AMPR, FRM_PIPE, KC_BSPC, \
   _______, _______, KC_UP,   FRW_LEAC, FRW_DLR,  _______, _______, _______, _______, FRM_PLUS, FRM_MINS, KC_DEL,  \
   KC_DEL,  KC_LEFT, KC_DOWN, KC_RIGHT,FRW_LPRN, _______, _______, FRW_RPRN, _______, FRM_ASTR, FRM_SLSH, FRM_PERC, \
-  _______, _______, _______, _______, _______, _______, _______,_______,_______, FRM_EXLM, FRM_EQL, _______, \
-  _______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY \
+  _______, KC_NUBS, _______, _______, _______, _______, _______,_______,_______, FRM_EXLM, FRM_EQL, _______, \
+  KC_LCTL, _______, _______, KC_LALT, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY \
 ),
 
 /* Raise
@@ -109,11 +109,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |   à  |      |   è  |      |      |      |      |      |      |      | Del  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | Del  |      |      |      |   {  |      |      |   }  |      |      |      |      |
+ * | Del  |      |      |      |   {  |      |      |   }  |      |      |   \  |      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |      |      |   ç  |      |      |      |      |      |      |      |      |
+ * |      |   >  |      |   ç  |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |             |      | Next | Vol- | Vol+ | Play |
+ * | Ctrl |      |      | Alt  |      |             |      | Next | Vol- | Vol+ | Play |
  * `-----------------------------------------------------------------------------------'
  */
 
@@ -121,18 +121,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_RAISE_MAC] = LAYOUT_preonic_grid( \
   _______,  FRM_1,    FRM_2,    FRM_3,    FRM_4,    FRM_5,    FRM_6,    FRM_7,    FRM_8,    FRM_9,    FRM_0,    KC_BSPC, \
   _______, FRM_LAGR,  _______,   FRM_LEGR,  _______,    _______,    _______,    _______,    _______,    _______,    _______,    KC_DEL,  \
-  KC_DEL, _______, _______, _______, FRM_LCBR, _______, _______,   FRM_RCBR, _______,  _______, _______, _______, \
-  _______,_______, _______, FRM_LCCE, _______, _______, _______,  _______, _______, _______, _______, _______, \
-  _______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY  \
+  KC_DEL, _______, _______, _______, FRM_LCBR, _______, _______,   FRM_RCBR, _______,  _______, FRM_FRSL, _______, \
+  _______,FRM_RABK, _______, FRM_LCCE, _______, _______, _______,  _______, _______, _______, _______, _______, \
+  KC_LCTL, _______, _______, KC_LALT, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY  \
 ),
 
  // Windows
 [_RAISE_WIN] = LAYOUT_preonic_grid( \
   _______,  FRW_1,    FRW_2,    FRW_3,    FRW_4,    FRW_5,    FRW_6,    FRW_7,    FRW_8,    FRW_9,    FRW_0,    KC_BSPC, \
   _______, FRW_LAGR,  _______, FRW_LEGR,  _______, _______,  _______,   _______,   _______,   _______, _______,    KC_DEL,  \
-  KC_DEL, _______, _______, _______, FRW_LCBR, _______, _______,   FRW_RCBR, _______,  _______, _______, _______, \
-  _______,_______, _______, FRM_LCCE, _______, _______, _______,  _______, _______, _______, _______, _______, \
-  _______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY  \
+  KC_DEL, _______, _______, _______, FRW_LCBR, _______, _______,   FRW_RCBR, _______,  _______, FRM_FRSL, _______, \
+  _______,S(KC_NUBS), _______, FRM_LCCE, _______, _______, _______,  _______, _______, _______, _______, _______, \
+  KC_LCTL, _______, _______, KC_LALT, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY  \
 ),
 
 /* Adjust (Lower + Raise)
@@ -145,7 +145,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |MuMod |Voice-|Voice+|Mus on|MusOff|MidiOn|MidOff|Aud on|AudOff|AGnorm|AGswap|      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |      |      |  Alt |             |      |      |      |      |      |
+ * | Ctrl |      |      |   Alt|      |             |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 
@@ -155,7 +155,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_SLEP, RESET,   DEBUG,   _______, _______, _______, _______, TERM_ON, TERM_OFF,_______, AZERTY_WIN, KC_PSCR,  \
   _______, _______, _______,  _______, FRM_LBRC,  _______, _______, FRM_RBRC , _______, _______, _______,  _______, \
   MU_MOD, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, _______, \
-  _______, _______, _______, KC_LALT, _______, _______, _______, _______, _______, _______, _______, _______  \
+  KC_LCTL, _______, _______, KC_LALT, _______, _______, _______, _______, _______, _______, _______, _______  \
 ),
 
 //Windows & Linux
@@ -164,7 +164,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_SLEP, RESET,   DEBUG,   _______, _______, _______, _______, TERM_ON, TERM_OFF,_______, AZERTY_MAC, KC_PSCR,  \
   _______, _______, _______,  _______, FRW_LBRC,  _______, _______, FRW_RBRC , _______, _______, _______,  _______, \
   MU_MOD, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, _______, \
-  _______, _______, _______, KC_LALT, _______, _______, _______, _______, _______, _______, _______, _______  \
+  KC_LCTL, _______, _______, KC_LALT, _______, _______, _______, _______, _______, _______, _______, _______  \
 )
 
 

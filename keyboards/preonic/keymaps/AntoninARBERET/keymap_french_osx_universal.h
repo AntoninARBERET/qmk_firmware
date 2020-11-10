@@ -74,7 +74,7 @@
 #define FRM_LUGR KC_QUOT // ù
 #define FRM_GRV  KC_NUHS // `
 // Row 4
-#define FRM_LABK KC_NUBS // <
+#define FRM_LABK KC_GRV // <
 #define FRM_W    KC_Z    // W
 #define FRM_X    KC_X    // X
 #define FRM_C    KC_C    // C
