@@ -54,32 +54,32 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // MAC OS
 [_AZERTY_MAC] = LAYOUT_preonic_grid( \
-  KC_NUBS,   FRM_AMPR, FRM_LEAC, FRM_DQUO, FRM_QUOT, FRM_LPRN, FRM_SECT, FRM_LEGR, FRM_EXLM, FRM_LCCE, FRM_LAGR, FRM_MINS, \
-  KC_TAB,  FRM_A,    FRM_Z,    FRM_E,    FRM_R,    FRM_T,    FRM_Y,    FRM_U,    FRM_I,    FRM_O,    FRM_P,    KC_BSPC,  \
-  KC_ESC,  FRM_Q,    FRM_S,    FRM_D,    FRM_F,    FRM_G,    FRM_H,    FRM_J,    FRM_K,    FRM_L,    FRM_M,    FRM_CIRC, \
-  KC_LSFT, FRM_W,    FRM_X,    FRM_C,    FRM_V,    FRM_B,    FRM_N,    FRM_COMM, FRM_SCLN,  FRM_COLN,  KC_UP,  KC_ENT,  \
-  KC_LCTL, BACKLIT,  KC_LALT, KC_LGUI, LOWER_MAC,   KC_SPC,  KC_SPC,  RAISE_MAC,   KC_LGUI, KC_LEFT, KC_DOWN,   KC_RIGHT  \
+  KC_NUBS,  FRM_AMPR, FRM_LEAC, FRM_DQUO, FRM_QUOT,   FRM_LPRN, FRM_SECT, FRM_LEGR,   FRM_EXLM, FRM_LCCE, FRM_LAGR, FRM_MINS, \
+  KC_TAB,   FRM_A,    FRM_Z,    FRM_E,    FRM_R,      FRM_T,    FRM_Y,    FRM_U,      FRM_I,    FRM_O,    FRM_P,    KC_BSPC,  \
+  KC_ESC,   FRM_Q,    FRM_S,    FRM_D,    FRM_F,      FRM_G,    FRM_H,    FRM_J,      FRM_K,    FRM_L,    FRM_M,    FRM_CIRC, \
+  KC_LSFT,  FRM_W,    FRM_X,    FRM_C,    FRM_V,      FRM_B,    FRM_N,    FRM_COMM,   FRM_SCLN, FRM_COLN, KC_UP,    KC_ENT,  \
+  KC_LCTL,  BACKLIT,  KC_LALT,  KC_LGUI,  LOWER_MAC,  KC_SPC,   KC_SPC,   RAISE_MAC,  KC_LGUI,  KC_LEFT,  KC_DOWN,  KC_RIGHT  \
 ),
 
 // Windows & Linux
 [_AZERTY_WIN] = LAYOUT_preonic_grid( \
-  FRW_SUP2,   FRM_AMPR, FRM_LEAC, FRM_DQUO, FRM_QUOT, FRM_LPRN, FRM_SECT, FRM_LEGR, FRM_EXLM, FRM_LCCE, FRM_LAGR, FRM_MINS, \
-  KC_TAB,  FRW_A,    FRW_Z,    FRW_E,    FRW_R,    FRW_T,    FRW_Y,    FRW_U,    FRW_I,    FRW_O,    FRW_P,    KC_BSPC,  \
-  KC_ESC,  FRW_Q,    FRW_S,    FRW_D,    FRW_F,    FRW_G,    FRW_H,    FRW_J,    FRW_K,    FRW_L,    FRW_M,    FRW_CIRC, \
-  KC_LSFT, FRW_W,    FRW_X,    FRW_C,    FRW_V,    FRW_B,    FRW_N,    FRW_COMM, FRW_SCLN,  FRW_COLN, KC_UP,    KC_ENT,  \
-  KC_LCTL, BACKLIT,  KC_LGUI, KC_LALT,  LOWER_WIN,   KC_SPC,  KC_SPC,  RAISE_WIN,   KC_ALGR, KC_LEFT, KC_DOWN,   KC_RIGHT   \
+  FRW_SUP2, FRM_AMPR, FRM_LEAC, FRM_DQUO, FRM_QUOT,   FRM_LPRN, FRM_SECT, FRM_LEGR,   FRM_EXLM, FRM_LCCE, FRM_LAGR, FRM_MINS, \
+  KC_TAB,   FRW_A,    FRW_Z,    FRW_E,    FRW_R,      FRW_T,    FRW_Y,    FRW_U,      FRW_I,    FRW_O,    FRW_P,    KC_BSPC,  \
+  KC_ESC,   FRW_Q,    FRW_S,    FRW_D,    FRW_F,      FRW_G,    FRW_H,    FRW_J,      FRW_K,    FRW_L,    FRW_M,    FRW_CIRC, \
+  KC_LSFT,  FRW_W,    FRW_X,    FRW_C,    FRW_V,      FRW_B,    FRW_N,    FRW_COMM,   FRW_SCLN, FRW_COLN, KC_UP,    KC_ENT,  \
+  KC_LCTL,  BACKLIT,  KC_LGUI,  KC_LALT,  LOWER_WIN,  KC_SPC,   KC_SPC,   RAISE_WIN,  KC_ALGR,  KC_LEFT,  KC_DOWN,  KC_RIGHT  \
 ),
 
 
 /* Lower
  * ,-----------------------------------------------------------------------------------.
- * |   ~  |      |      |      |      |      |      |      |      |   &  |   |  | Bksp |
+ * |   ~  |      |      |      |      |   &  |   |  |      |      |   &  |   |  | Bksp |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |      |  up  |   é  |   $  |      |      |      |      |   +  |   -  | Del  |
+ * |      |      |  up  |   é  |   $  |   +  |   -  |      |      |   +  |   -  | Del  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | Del  | left | down |right |   (  |      |      |   )  |      |   *  |   /  |   %  |
+ * | Del  | left | down |right |   (  |   *  |   /  |   )  |      |   *  |   /  |   %  |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |   <  |      |      |      |      |      |      |      |   !  |   =  |      |
+ * |      |   <  |      |      |      |   =  |   !  |      |      |   !  |   =  |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Ctrl |      |      | Alt  |      |             |      | Next | Vol- | Vol+ | Play |
  * `-----------------------------------------------------------------------------------'
@@ -87,31 +87,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  // Mac OS
 [_LOWER_MAC] = LAYOUT_preonic_grid( \
-  FRM_TILD, _______, _______,   _______, _______,  _______, _______, _______, _______, FRM_AMPR, FRM_PIPE, KC_BSPC, \
-  _______ , _______, KC_UP,   FRM_LEAC, FRM_DLR,  _______, _______, _______, _______, FRM_PLUS, FRM_MINS, KC_DEL,  \
-  KC_DEL,  KC_LEFT, KC_DOWN, KC_RIGHT,FRM_LPRN, _______, _______, FRM_RPRN, _______, FRM_ASTR, FRM_SLSH, FRM_PERC, \
-  _______, FRM_LABK, _______, _______, _______, _______, _______,_______,_______, FRM_EXLM, FRM_EQL, _______, \
-  KC_LCTL, _______, _______, KC_LALT, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY \
+  FRM_TILD, _______,  _______, _______,   _______,  FRM_AMPR, FRM_PIPE, _______,  _______, FRM_AMPR,  FRM_PIPE, KC_BSPC, \
+  _______ , _______,  KC_UP,   FRM_LEAC,  FRM_DLR,  FRM_PLUS, FRM_MINS, _______,  _______, FRM_PLUS,  FRM_MINS, KC_DEL,  \
+  KC_DEL,   KC_LEFT,  KC_DOWN, KC_RIGHT,  FRM_LPRN, FRM_ASTR, FRM_SLSH, FRM_RPRN, _______, FRM_ASTR,  FRM_SLSH, FRM_PERC, \
+  _______,  FRM_LABK, _______, _______,   _______,  FRM_EQL,  FRM_EXLM,  _______,  _______, FRM_EXLM,  FRM_EQL,  _______, \
+  KC_LCTL,  _______,  _______, KC_LALT,   _______,  _______,  _______,  _______,  KC_MNXT, KC_VOLD,   KC_VOLU,  KC_MPLY \
 ),
 
 //Windows & Linux
 [_LOWER_WIN] = LAYOUT_preonic_grid( \
-  FRW_TILD, _______, _______,  _______, _______,  _______, _______, _______, _______, FRM_AMPR, ALGR(S(KC_L)), KC_BSPC, \
-  _______, _______, KC_UP,   FRW_LEAC, FRW_DLR,  _______, _______, _______, _______, FRM_PLUS, FRM_MINS, KC_DEL,  \
-  KC_DEL,  KC_LEFT, KC_DOWN, KC_RIGHT,FRW_LPRN, _______, _______, FRW_RPRN, _______, FRM_ASTR, FRM_SLSH, FRM_PERC, \
-  _______, KC_NUBS, _______, _______, _______, _______, _______,_______,_______, FRM_EXLM, FRM_EQL, _______, \
-  KC_LCTL, _______, _______, KC_LALT, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY \
+  FRW_TILD, _______, _______,  _______, _______,  FRM_AMPR, ALGR(S(KC_L)),  _______,  _______,  FRM_AMPR, ALGR(S(KC_L)),  KC_BSPC, \
+  _______, _______, KC_UP,   FRW_LEAC, FRW_DLR,   FRM_PLUS, FRM_MINS,       _______,  _______,  FRM_PLUS, FRM_MINS,       KC_DEL,  \
+  KC_DEL,  KC_LEFT, KC_DOWN, KC_RIGHT,FRW_LPRN,   FRM_ASTR, FRM_SLSH,       FRW_RPRN, _______,  FRM_ASTR, FRM_SLSH,       FRM_PERC, \
+  _______, KC_NUBS, _______, _______, _______,    FRM_EQL,  FRM_EXLM,       _______,  _______,  FRM_EXLM, FRM_EQL,        _______, \
+  KC_LCTL, _______, _______, KC_LALT, _______,    _______,  _______,        _______,  KC_MNXT,  KC_VOLD,  KC_VOLU,        KC_MPLY \
 ),
 
 /* Raise
  * ,-----------------------------------------------------------------------------------.
- * |      |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
+ * |      |      |      |      |      |   &  |   |  |      |      |      |      | Bksp |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |   à  |      |   è  |      |      |      |      |      |      |      | Del  |
+ * |      |   à  |      |   è  |      |   +  |   -  |      |      |      |      | Del  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | Del  |      |      |      |   {  |      |      |   }  |      |      |   \  |      |
+ * | Del  |      |      |      |   {  |   *  |   /  |   }  |      |      |   \  |      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |   >  |      |   ç  |      |      |      |      |      |      |      |      |
+ * |      |   >  |      |   ç  |      |   =  |   !  |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Ctrl |      |      | Alt  |      |             |      | Next | Vol- | Vol+ | Play |
  * `-----------------------------------------------------------------------------------'
@@ -119,29 +119,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // Mac OS
 [_RAISE_MAC] = LAYOUT_preonic_grid( \
-  _______,  FRM_1,    FRM_2,    FRM_3,    FRM_4,    FRM_5,    FRM_6,    FRM_7,    FRM_8,    FRM_9,    FRM_0,    KC_BSPC, \
-  _______, FRM_LAGR,  _______,   FRM_LEGR,  _______,    _______,    _______,    _______,    _______,    _______,    _______,    KC_DEL,  \
-  KC_DEL, _______, _______, _______, FRM_LCBR, _______, _______,   FRM_RCBR, _______,  _______, FRM_FRSL, _______, \
-  _______,FRM_RABK, _______, FRM_LCCE, _______, _______, _______,  _______, _______, _______, _______, _______, \
-  KC_LCTL, _______, _______, KC_LALT, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY  \
+  _______,  _______,  _______, _______,   _______,  FRM_AMPR, FRM_PIPE, _______,  _______,  _______,  _______,  KC_BSPC, \
+  _______,  FRM_LAGR, _______, FRM_LEGR,  _______,  FRM_PLUS, FRM_MINS, _______,  _______,  _______,  _______,  KC_DEL,  \
+  KC_DEL,   _______,  _______, _______,   FRM_LCBR, FRM_ASTR, FRM_SLSH, FRM_RCBR, _______,  _______,  FRM_FRSL, _______, \
+  _______,  FRM_RABK, _______, FRM_LCCE,  _______,  FRM_EQL,  FRM_EXLM, _______,  _______,  _______,  _______,  _______, \
+  KC_LCTL,  _______,  _______, KC_LALT,   _______,  _______,  _______,  _______,  KC_MNXT,  KC_VOLD,  KC_VOLU,  KC_MPLY  \
 ),
 
  // Windows
 [_RAISE_WIN] = LAYOUT_preonic_grid( \
-  _______,  FRW_1,    FRW_2,    FRW_3,    FRW_4,    FRW_5,    FRW_6,    FRW_7,    FRW_8,    FRW_9,    FRW_0,    KC_BSPC, \
-  _______, FRW_LAGR,  _______, FRW_LEGR,  _______, _______,  _______,   _______,   _______,   _______, _______,    KC_DEL,  \
-  KC_DEL, _______, _______, _______, FRW_LCBR, _______, _______,   FRW_RCBR, _______,  _______, FRM_FRSL, _______, \
-  _______,S(KC_NUBS), _______, FRM_LCCE, _______, _______, _______,  _______, _______, _______, _______, _______, \
-  KC_LCTL, _______, _______, KC_LALT, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY  \
-),
+  _______,  _______,    _______,  _______,  _______,  FRM_AMPR, ALGR(S(KC_L)),  _______,  _______, FRW_9,   FRW_0,    KC_BSPC, \
+  _______,  FRW_LAGR,   _______,  FRW_LEGR, _______,  FRM_PLUS, FRM_MINS,       _______,  _______, _______, _______,  KC_DEL,  \
+  KC_DEL,   _______,    _______,  _______,  FRW_LCBR, FRM_ASTR, FRM_SLSH,       FRW_RCBR, _______, _______, FRM_FRSL, _______, \
+  _______,  S(KC_NUBS), _______,  FRM_LCCE, _______,  FRM_EQL,  FRM_EXLM,       _______,  _______, _______, _______,  _______, \
+  KC_LCTL,  _______,    _______,  KC_LALT,  _______,  _______,  _______,        _______,  KC_MNXT, KC_VOLD, KC_VOLU,  KC_MPLY  \
+    ), 
 
 /* Adjust (Lower + Raise)
  * ,-----------------------------------------------------------------------------------.
  * |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Sleep| Reset| Debug|      |      |      |      |      |      |      |  OS  | Print|
+ * | F13  |  F14 |  F15 |  F16 |  F17 |  F18 |  F19 |      |      |      |  OS  | Print|
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |      |      |      |   [  |      |      |   ]  |      |      |      |      |
+ * |      |      |      |      |   [  |      |      |   ]  |      |      | Reset| Debug|
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |MuMod |Voice-|Voice+|Mus on|MusOff|MidiOn|MidOff|Aud on|AudOff|AGnorm|AGswap|      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -151,20 +151,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  // Mac OS
 [_ADJUST_MAC] = LAYOUT_preonic_grid( \
-  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  \
-  KC_SLEP, RESET,   DEBUG,   _______, _______, _______, _______, TERM_ON, TERM_OFF,_______, AZERTY_WIN, KC_PSCR,  \
-  _______, _______, _______,  _______, FRM_LBRC,  _______, _______, FRM_RBRC , _______, _______, _______,  _______, \
-  MU_MOD, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, _______, \
-  KC_LCTL, _______, _______, KC_LALT, _______, _______, _______, _______, _______, _______, _______, _______  \
-),
+  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,   KC_F7,   KC_F8,    KC_F9,    KC_F10,   KC_F11,     KC_F12,  \
+  KC_F13,   KC_F14,   KC_F15,   KC_F16,   KC_F17,   KC_F18,  KC_F19,  _______,  _______,  _______,  AZERTY_WIN, KC_PSCR,  \
+  _______,  _______,  _______,  _______,  FRM_LBRC, _______, _______, FRM_RBRC, _______,  _______,  RESET,      DEBUG, \
+  MU_MOD,   MUV_DE,   MUV_IN,   MU_ON,    MU_OFF,   MI_ON,   MI_OFF,  AU_ON,    AU_OFF,   AG_NORM,  AG_SWAP,    _______, \
+  KC_LCTL,  _______,  _______,  KC_LALT,  _______,  _______, _______, _______,  _______,  _______,  _______,    KC_SLEP  \
+), 
 
 //Windows & Linux
 [_ADJUST_WIN] = LAYOUT_preonic_grid( \
-  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  \
-  KC_SLEP, RESET,   DEBUG,   _______, _______, _______, _______, TERM_ON, TERM_OFF,_______, AZERTY_MAC, KC_PSCR,  \
-  _______, _______, _______,  _______, FRW_LBRC,  _______, _______, FRW_RBRC , _______, _______, _______,  _______, \
-  MU_MOD, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, _______, \
-  KC_LCTL, _______, _______, KC_LALT, _______, _______, _______, _______, _______, _______, _______, _______  \
+  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,  KC_F11,      KC_F12,  \
+  KC_F13,   KC_F14,   KC_F15,   KC_F16,   KC_F17,   KC_F18,   KC_F19,   _______,  _______,  _______, AZERTY_MAC,  KC_PSCR,  \
+  _______,  _______,  _______,  _______,  FRW_LBRC, _______,  _______,  FRW_RBRC, _______,  _______, RESET,       DEBUG, \
+  MU_MOD,   MUV_DE,   MUV_IN,   MU_ON,    MU_OFF,   MI_ON,    MI_OFF,   AU_ON,    AU_OFF,   AG_NORM, AG_SWAP,     _______, \
+  KC_LCTL,  _______,  _______,  KC_LALT,  _______,  _______,  _______,  _______,  _______,  _______, _______,     KC_SLEP  \
 )
 
 
