@@ -91,7 +91,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * | Del  | left | down |right |   (  |   *  |   /  |   )  |      |   *  |   /  |   %  |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |   <  |      |      |      |   =  |   !  |      |      |   !  |   =  |      |
+ * |      |   <  |      |      |      |   =  |   !  |      |      |   /  |   =  |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Ctrl |      |      | Alt  |      |             |      | Next | Vol- | Vol+ | Play |
  * `-----------------------------------------------------------------------------------'
@@ -102,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   FRM_TILD, _______,  _______, _______,   _______,  FRM_AMPR, FRM_PIPE, _______,  _______, FRM_AMPR,  FRM_PIPE, KC_BSPC, \
   _______ , _______,  KC_UP,   FRM_LEAC,  FRM_DLR,  FRM_PLUS, FRM_MINS, _______,  _______, FRM_PLUS,  FRM_MINS, KC_DEL,  \
   KC_DEL,   KC_LEFT,  KC_DOWN, KC_RIGHT,  FRM_LPRN, FRM_ASTR, FRM_SLSH, FRM_RPRN, _______, FRM_ASTR,  FRM_SLSH, FRM_PERC, \
-  _______,  FRM_LABK, _______, _______,   _______,  FRM_EQL,  FRM_EXLM,  _______,  _______, FRM_EXLM,  FRM_EQL,  _______, \
+  _______,  FRM_LABK, _______, _______,   _______,  FRM_EQL,  FRM_EXLM,  _______,  _______, FRM_SLSH,  FRM_EQL,  _______, \
   KC_LCTL,  _______,  _______, KC_LALT,   _______,  _______,  _______,  _______,  KC_MNXT, KC_VOLD,   KC_VOLU,  KC_MPLY \
 ),
 
@@ -121,9 +121,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |   à  |      |   è  |      |   +  |   -  |      |      |      |      | Del  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | Del  |      |      |      |   {  |   *  |   /  |   }  |      |      |   \  |      |
+ * | Del  |      |      |      |   {  |   *  |   /  |   }  |      |      |      |   %  |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |   >  |      |   ç  |      |   =  |   !  |      |      |      |      |      |
+ * |      |   >  |      |   ç  |      |   =  |   !  |      |      |   \  |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Ctrl |      |      | Alt  |      |             |      | Next | Vol- | Vol+ | Play |
  * `-----------------------------------------------------------------------------------'
@@ -133,8 +133,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_RAISE_MAC] = LAYOUT_preonic_grid( \
   _______,  _______,  _______, _______,   _______,  FRM_AMPR, FRM_PIPE, _______,  _______,  _______,  _______,  KC_BSPC, \
   _______,  FRM_LAGR, _______, FRM_LEGR,  _______,  FRM_PLUS, FRM_MINS, _______,  _______,  _______,  _______,  KC_DEL,  \
-  KC_DEL,   _______,  _______, _______,   FRM_LCBR, FRM_ASTR, FRM_SLSH, FRM_RCBR, _______,  _______,  FRM_FRSL, _______, \
-  _______,  FRM_RABK, _______, FRM_LCCE,  _______,  FRM_EQL,  FRM_EXLM, _______,  _______,  _______,  _______,  _______, \
+  KC_DEL,   _______,  _______, _______,   FRM_LCBR, FRM_ASTR, FRM_SLSH, FRM_RCBR, _______,  _______,  _______, FRM_PERC, \
+  _______,  FRM_RABK, _______, FRM_LCCE,  _______,  FRM_EQL,  FRM_EXLM, _______,  _______,  FRM_BSLS,  _______,  _______, \
   KC_LCTL,  _______,  _______, KC_LALT,   _______,  _______,  _______,  _______,  KC_MNXT,  KC_VOLD,  KC_VOLU,  KC_MPLY  \
 ),
 
@@ -142,8 +142,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_RAISE_WIN] = LAYOUT_preonic_grid( \
   _______,  _______,    _______,  _______,  _______,  FRM_AMPR, ALGR(S(KC_L)),  _______,  _______, FRW_9,   FRW_0,    KC_BSPC, \
   _______,  FRW_LAGR,   _______,  FRW_LEGR, _______,  FRM_PLUS, FRM_MINS,       _______,  _______, _______, _______,  KC_DEL,  \
-  KC_DEL,   _______,    _______,  _______,  FRW_LCBR, FRM_ASTR, FRM_SLSH,       FRW_RCBR, _______, _______, FRM_FRSL, _______, \
-  _______,  S(KC_NUBS), _______,  FRM_LCCE, _______,  FRM_EQL,  FRM_EXLM,       _______,  _______, _______, _______,  _______, \
+  KC_DEL,   _______,    _______,  _______,  FRW_LCBR, FRM_ASTR, FRM_SLSH,       FRW_RCBR, _______, _______, FRM_FRSL, FRM_PERC, \
+  _______,  S(KC_NUBS), _______,  FRM_LCCE, _______,  FRM_EQL,  FRM_EXLM,       _______,  _______, FRM_BSLS, _______,  _______, \
   KC_LCTL,  _______,    _______,  KC_LALT,  _______,  _______,  _______,        _______,  KC_MNXT, KC_VOLD, KC_VOLU,  KC_MPLY  \
     ), 
 
