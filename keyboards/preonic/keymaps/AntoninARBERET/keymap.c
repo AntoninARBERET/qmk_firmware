@@ -2,6 +2,17 @@
 #include "muse.h"
 #include "keymap_french_osx_universal.h"
 #include "keymap_french_win_universal.h"
+#include <time.h>
+
+bool cncr_mode = false;
+bool rand_init = false;
+
+
+const uint16_t alpha_codes[26] = {
+  FRM_A,    FRM_Z,    FRM_E,    FRM_R,      FRM_T,    FRM_Y,    FRM_U,      FRM_I,    FRM_O,    FRM_P,  \
+  FRM_Q,    FRM_S,    FRM_D,    FRM_F,      FRM_G,    FRM_H,    FRM_J,      FRM_K,    FRM_L,    FRM_M, \
+  FRM_W,    FRM_X,    FRM_C,    FRM_V,      FRM_B,    FRM_N, \
+};
 
 typedef union {
   uint32_t raw;
@@ -32,7 +43,8 @@ enum preonic_keycodes {
   RAISE_WIN,
   ADJUST_MAC,
   ADJUST_WIN,
-  BACKLIT
+  BACKLIT,
+  CN_MODE
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -64,9 +76,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Windows & Linux
 [_AZERTY_WIN] = LAYOUT_preonic_grid( \
   FRW_SUP2, FRM_AMPR, FRM_LEAC, FRM_DQUO, FRM_QUOT,   FRM_LPRN, FRM_SECT, FRM_LEGR,   FRM_EXLM, FRM_LCCE, FRM_LAGR, FRM_MINS, \
-  KC_TAB,   FRW_A,    FRW_Z,    FRW_E,    FRW_R,      FRW_T,    FRW_Y,    FRW_U,      FRW_I,    FRW_O,    FRW_P,    KC_BSPC,  \
-  KC_ESC,   FRW_Q,    FRW_S,    FRW_D,    FRW_F,      FRW_G,    FRW_H,    FRW_J,      FRW_K,    FRW_L,    FRW_M,    FRW_CIRC, \
-  KC_LSFT,  FRW_W,    FRW_X,    FRW_C,    FRW_V,      FRW_B,    FRW_N,    FRW_COMM,   FRW_SCLN, FRW_COLN, KC_UP,    KC_ENT,  \
+  KC_TAB,   FRM_A,    FRM_Z,    FRM_E,    FRM_R,      FRM_T,    FRM_Y,    FRM_U,      FRM_I,    FRM_O,    FRM_P,    KC_BSPC,  \
+  KC_ESC,   FRM_Q,    FRM_S,    FRM_D,    FRM_F,      FRM_G,    FRM_H,    FRM_J,      FRM_K,    FRM_L,    FRM_M,    FRW_CIRC, \
+  KC_LSFT,  FRM_W,    FRM_X,    FRM_C,    FRM_V,      FRM_B,    FRM_N,    FRW_COMM,   FRW_SCLN, FRW_COLN, KC_UP,    KC_ENT,  \
   KC_LCTL,  BACKLIT,  KC_LGUI,  KC_LALT,  LOWER_WIN,  KC_SPC,   KC_SPC,   RAISE_WIN,  KC_ALGR,  KC_LEFT,  KC_DOWN,  KC_RIGHT  \
 ),
 
@@ -143,7 +155,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * |      |      |      |      |   [  |      |      |   ]  |      |      | Reset| Debug|
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |MuMod |Voice-|Voice+|Mus on|MusOff|MidiOn|MidOff|Aud on|AudOff|AGnorm|AGswap|      |
+ * |MuMod |Voice-|Voice+|Mus on|MusOff|MidiOn|MidOff|Aud on|AudOff|AGnorm|AGswap| Cncr |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Ctrl |      |      |   Alt|      |             |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
@@ -154,7 +166,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,   KC_F7,   KC_F8,    KC_F9,    KC_F10,   KC_F11,     KC_F12,  \
   KC_F13,   KC_F14,   KC_F15,   KC_F16,   KC_F17,   KC_F18,  KC_F19,  _______,  _______,  _______,  AZERTY_WIN, KC_PSCR,  \
   _______,  _______,  _______,  _______,  FRM_LBRC, _______, _______, FRM_RBRC, _______,  _______,  RESET,      DEBUG, \
-  MU_MOD,   MUV_DE,   MUV_IN,   MU_ON,    MU_OFF,   MI_ON,   MI_OFF,  AU_ON,    AU_OFF,   AG_NORM,  AG_SWAP,    _______, \
+  MU_MOD,   MUV_DE,   MUV_IN,   MU_ON,    MU_OFF,   MI_ON,   MI_OFF,  AU_ON,    AU_OFF,   AG_NORM,  AG_SWAP,    CN_MODE, \
   KC_LCTL,  _______,  _______,  KC_LALT,  _______,  _______, _______, _______,  _______,  _______,  _______,    KC_SLEP  \
 ), 
 
@@ -163,12 +175,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,  KC_F11,      KC_F12,  \
   KC_F13,   KC_F14,   KC_F15,   KC_F16,   KC_F17,   KC_F18,   KC_F19,   _______,  _______,  _______, AZERTY_MAC,  KC_PSCR,  \
   _______,  _______,  _______,  _______,  FRW_LBRC, _______,  _______,  FRW_RBRC, _______,  _______, RESET,       DEBUG, \
-  MU_MOD,   MUV_DE,   MUV_IN,   MU_ON,    MU_OFF,   MI_ON,    MI_OFF,   AU_ON,    AU_OFF,   AG_NORM, AG_SWAP,     _______, \
+  MU_MOD,   MUV_DE,   MUV_IN,   MU_ON,    MU_OFF,   MI_ON,    MI_OFF,   AU_ON,    AU_OFF,   AG_NORM, AG_SWAP,     CN_MODE, \
   KC_LCTL,  _______,  _______,  KC_LALT,  _______,  _______,  _______,  _______,  _______,  _______, _______,     KC_SLEP  \
 )
 
 
 };
+
+
+bool is_alpha(uint16_t keycode){
+  int i;
+  for(i = 0; i < 26; i++){
+    if(alpha_codes[i] == keycode){
+      return true;
+    }
+  }
+  return false;
+}
 
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -252,9 +275,32 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           }
           return false;
           break;
+        case CN_MODE:
+          if (record->event.pressed) {
+            cncr_mode = !cncr_mode;
+          }
+          break;
       }
-    return true;
+    if(record->event.pressed && cncr_mode && is_alpha(keycode)){
+      if(!rand_init){
+        srand(117);
+        rand_init = true;
+      }
+      if(rand()>RAND_MAX/2){
+        register_code(KC_LSFT);
+        tap_code(S(keycode));
+        unregister_code(KC_LSFT);
+        return false;
+      }
+      else{
+        return true;
+      }
+    }else{
+      return true;
+    }
 };
+
+
 
 bool muse_mode = false;
 uint8_t last_muse_note = 0;
