@@ -85,9 +85,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Lower
  * ,-----------------------------------------------------------------------------------.
- * |   ~  |      |      |      |      |   &  |   |  |      |      |   &  |   |  | Bksp |
+ * |   ~  |      |      |      |      |   &  |   |  |      |      |   &  |   |  |  Del |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |      |  up  |   é  |   $  |   +  |   -  |      |      |   +  |   -  | Del  |
+ * |      |      |  up  |   é  |   $  |   +  |   -  |      |      |   +  |   -  | Bcksp|
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * | Del  | left | down |right |   (  |   *  |   /  |   )  |      |   *  |   /  |   %  |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
@@ -99,8 +99,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  // Mac OS
 [_LOWER_MAC] = LAYOUT_preonic_grid( \
-  FRM_TILD, _______,  _______, _______,   _______,  FRM_AMPR, FRM_PIPE, _______,  _______, FRM_AMPR,  FRM_PIPE, KC_BSPC, \
-  _______ , _______,  KC_UP,   FRM_LEAC,  FRM_DLR,  FRM_PLUS, FRM_MINS, _______,  _______, FRM_PLUS,  FRM_MINS, KC_DEL,  \
+  FRM_TILD, _______,  _______, _______,   _______,  FRM_AMPR, FRM_PIPE, _______,  _______, FRM_AMPR,  FRM_PIPE, KC_DEL, \
+  _______ , _______,  KC_UP,   FRM_LEAC,  FRM_DLR,  FRM_PLUS, FRM_MINS, _______,  _______, FRM_PLUS,  FRM_MINS, KC_BSPC,  \
   KC_DEL,   KC_LEFT,  KC_DOWN, KC_RIGHT,  FRM_LPRN, FRM_ASTR, FRM_SLSH, FRM_RPRN, _______, FRM_ASTR,  FRM_SLSH, FRM_PERC, \
   _______,  FRM_LABK, _______, _______,   _______,  FRM_EQL,  FRM_EXLM,  _______,  _______, FRM_SLSH,  FRM_EQL,  _______, \
   KC_LCTL,  _______,  _______, KC_LALT,   _______,  _______,  _______,  _______,  KC_MNXT, KC_VOLD,   KC_VOLU,  KC_MPLY \
@@ -108,8 +108,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 //Windows & Linux
 [_LOWER_WIN] = LAYOUT_preonic_grid( \
-  FRW_TILD, _______, _______,  _______, _______,  FRM_AMPR, ALGR(S(KC_L)),  _______,  _______,  FRM_AMPR, ALGR(S(KC_L)),  KC_BSPC, \
-  _______, _______, KC_UP,   FRW_LEAC, FRW_DLR,   FRM_PLUS, FRM_MINS,       _______,  _______,  FRM_PLUS, FRM_MINS,       KC_DEL,  \
+  FRW_TILD, _______, _______,  _______, _______,  FRM_AMPR, ALGR(S(KC_L)),  _______,  _______,  FRM_AMPR, ALGR(S(KC_L)),  KC_DEL, \
+  _______, _______, KC_UP,   FRW_LEAC, FRW_DLR,   FRM_PLUS, FRM_MINS,       _______,  _______,  FRM_PLUS, FRM_MINS,       KC_BSPC,  \
   KC_DEL,  KC_LEFT, KC_DOWN, KC_RIGHT,FRW_LPRN,   FRM_ASTR, FRM_SLSH,       FRW_RPRN, _______,  FRM_ASTR, FRM_SLSH,       FRM_PERC, \
   _______, KC_NUBS, _______, _______, _______,    FRM_EQL,  FRM_EXLM,       _______,  _______,  FRM_EXLM, FRM_EQL,        _______, \
   KC_LCTL, _______, _______, KC_LALT, _______,    _______,  _______,        _______,  KC_MNXT,  KC_VOLD,  KC_VOLU,        KC_MPLY \
@@ -117,9 +117,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Raise
  * ,-----------------------------------------------------------------------------------.
- * |      |      |      |      |      |   &  |   |  |      |      |      |      | Bksp |
+ * |      |      |      |      |      |   &  |   |  |      |      |      |      |  Del |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |   à  |      |   è  |      |   +  |   -  |      |      |      |      | Del  |
+ * |      |   à  |      |   è  |      |   +  |   -  |      |      |      |      | Bcksp|
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * | Del  |      |      |      |   {  |   *  |   /  |   }  |      |      |      |   %  |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
@@ -131,19 +131,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // Mac OS
 [_RAISE_MAC] = LAYOUT_preonic_grid( \
-  _______,  _______,  _______, _______,   _______,  FRM_AMPR, FRM_PIPE, _______,  _______,  _______,  _______,  KC_BSPC, \
-  _______,  FRM_LAGR, _______, FRM_LEGR,  _______,  FRM_PLUS, FRM_MINS, _______,  _______,  _______,  _______,  KC_DEL,  \
-  KC_DEL,   _______,  _______, _______,   FRM_LCBR, FRM_ASTR, FRM_SLSH, FRM_RCBR, _______,  _______,  _______, FRM_PERC, \
-  _______,  FRM_RABK, _______, FRM_LCCE,  _______,  FRM_EQL,  FRM_EXLM, _______,  _______,  FRM_BSLS,  _______,  _______, \
+  _______,  _______,  _______, _______,   _______,  FRM_AMPR, FRM_PIPE, _______,  _______,  _______,  _______,  KC_DEL, \
+  _______,  FRM_LAGR, _______, FRM_LEGR,  _______,  FRM_PLUS, FRM_MINS, _______,  _______,  _______,  _______,  KC_BSPC,  \
+  KC_DEL,   _______,  _______, _______,   FRM_LCBR, FRM_ASTR, FRM_SLSH, FRM_RCBR, _______,  _______,  _______,  FRM_PERC, \
+  _______,  FRM_RABK, _______, FRM_LCCE,  _______,  FRM_EQL,  FRM_EXLM, _______,  _______,  FRM_BSLS,  _______, _______, \
   KC_LCTL,  _______,  _______, KC_LALT,   _______,  _______,  _______,  _______,  KC_MNXT,  KC_VOLD,  KC_VOLU,  KC_MPLY  \
 ),
 
  // Windows
 [_RAISE_WIN] = LAYOUT_preonic_grid( \
-  _______,  _______,    _______,  _______,  _______,  FRM_AMPR, ALGR(S(KC_L)),  _______,  _______, FRW_9,   FRW_0,    KC_BSPC, \
-  _______,  FRW_LAGR,   _______,  FRW_LEGR, _______,  FRM_PLUS, FRM_MINS,       _______,  _______, _______, _______,  KC_DEL,  \
+  _______,  _______,    _______,  _______,  _______,  FRM_AMPR, ALGR(S(KC_L)),  _______,  _______, FRW_9,   FRW_0,    KC_DEL, \
+  _______,  FRW_LAGR,   _______,  FRW_LEGR, _______,  FRM_PLUS, FRM_MINS,       _______,  _______, _______, _______,  KC_BSPC,  \
   KC_DEL,   _______,    _______,  _______,  FRW_LCBR, FRM_ASTR, FRM_SLSH,       FRW_RCBR, _______, _______, FRM_FRSL, FRM_PERC, \
-  _______,  S(KC_NUBS), _______,  FRM_LCCE, _______,  FRM_EQL,  FRM_EXLM,       _______,  _______, FRM_BSLS, _______,  _______, \
+  _______,  S(KC_NUBS), _______,  FRM_LCCE, _______,  FRM_EQL,  FRM_EXLM,       _______,  _______, FRM_BSLS, _______, _______, \
   KC_LCTL,  _______,    _______,  KC_LALT,  _______,  _______,  _______,        _______,  KC_MNXT, KC_VOLD, KC_VOLU,  KC_MPLY  \
     ), 
 
@@ -151,9 +151,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | F13  |  F14 |  F15 |  F16 |  F17 |  F18 |  F19 |      |      |      |  OS  | Print|
+ * |      |      |Ms Up |      |      |  F16 |  F17 |L clic|R clic|up scr|  OS  | Print|
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |      |      |      |   [  |      |      |   ]  |      |      | Reset| Debug|
+ * |      |Ms lft|Ms dwn|Ms rgt|   [  |  F18 |  F19 |   ]  |      |dn scr| Reset| Debug|
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |MuMod |Voice-|Voice+|Mus on|MusOff|MidiOn|MidOff|Aud on|AudOff|AGnorm|AGswap| Cncr |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -161,11 +161,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 
- // Mac OS
+// Mac OS
 [_ADJUST_MAC] = LAYOUT_preonic_grid( \
   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,   KC_F7,   KC_F8,    KC_F9,    KC_F10,   KC_F11,     KC_F12,  \
-  KC_F13,   KC_F14,   KC_F15,   KC_F16,   KC_F17,   KC_F18,  KC_F19,  _______,  _______,  _______,  AZERTY_WIN, KC_PSCR,  \
-  _______,  _______,  _______,  _______,  FRM_LBRC, _______, _______, FRM_RBRC, _______,  _______,  RESET,      DEBUG, \
+  _______,  KC_BTN1,  KC_MS_U,  KC_BTN2,   _______, KC_F16,  KC_F17,  KC_BTN1,  KC_BTN2,  KC_WH_U,  AZERTY_WIN, KC_PSCR,  \
+  _______,  KC_MS_L,  KC_MS_D,  KC_MS_R,  FRM_LBRC, KC_F18,  KC_F19,  FRM_RBRC, _______,  KC_WH_D,  RESET,      DEBUG, \
   MU_MOD,   MUV_DE,   MUV_IN,   MU_ON,    MU_OFF,   MI_ON,   MI_OFF,  AU_ON,    AU_OFF,   AG_NORM,  AG_SWAP,    CN_MODE, \
   KC_LCTL,  _______,  _______,  KC_LALT,  _______,  _______, _______, _______,  _______,  _______,  _______,    KC_SLEP  \
 ), 
@@ -173,8 +173,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //Windows & Linux
 [_ADJUST_WIN] = LAYOUT_preonic_grid( \
   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,  KC_F11,      KC_F12,  \
-  KC_F13,   KC_F14,   KC_F15,   KC_F16,   KC_F17,   KC_F18,   KC_F19,   _______,  _______,  _______, AZERTY_MAC,  KC_PSCR,  \
-  _______,  _______,  _______,  _______,  FRW_LBRC, _______,  _______,  FRW_RBRC, _______,  _______, RESET,       DEBUG, \
+  _______,  KC_BTN1,  KC_MS_U,  KC_BTN2,  _______,  KC_F16,   KC_F17,   _______,  KC_WH_U,  _______, AZERTY_MAC,  KC_PSCR,  \
+  _______,  KC_MS_L,  KC_MS_D,  KC_MS_R,  FRW_LBRC, KC_F18,   KC_F19,   FRW_RBRC, KC_WH_D,  _______, RESET,       DEBUG, \
   MU_MOD,   MUV_DE,   MUV_IN,   MU_ON,    MU_OFF,   MI_ON,    MI_OFF,   AU_ON,    AU_OFF,   AG_NORM, AG_SWAP,     CN_MODE, \
   KC_LCTL,  _______,  _______,  KC_LALT,  _______,  _______,  _______,  _______,  _______,  _______, _______,     KC_SLEP  \
 )
