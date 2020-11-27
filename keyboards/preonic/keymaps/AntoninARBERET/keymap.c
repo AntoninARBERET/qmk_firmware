@@ -164,7 +164,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Mac OS
 [_ADJUST_MAC] = LAYOUT_preonic_grid( \
   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,   KC_F7,   KC_F8,    KC_F9,    KC_F10,   KC_F11,     KC_F12,  \
-  _______,  KC_BTN1,  KC_MS_U,  KC_BTN2,   _______, KC_F16,  KC_F17,  KC_BTN1,  KC_BTN2,  KC_WH_U,  AZERTY_WIN, KC_PSCR,  \
+  _______,  _______,  KC_MS_U,  _______,   _______, KC_F16,  KC_F17,  KC_BTN1,  KC_BTN2,  KC_WH_U,  AZERTY_WIN, KC_PSCR,  \
   _______,  KC_MS_L,  KC_MS_D,  KC_MS_R,  FRM_LBRC, KC_F18,  KC_F19,  FRM_RBRC, _______,  KC_WH_D,  RESET,      DEBUG, \
   MU_MOD,   MUV_DE,   MUV_IN,   MU_ON,    MU_OFF,   MI_ON,   MI_OFF,  AU_ON,    AU_OFF,   AG_NORM,  AG_SWAP,    CN_MODE, \
   KC_LCTL,  _______,  _______,  KC_LALT,  _______,  _______, _______, _______,  _______,  _______,  _______,    KC_SLEP  \
@@ -173,8 +173,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //Windows & Linux
 [_ADJUST_WIN] = LAYOUT_preonic_grid( \
   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,  KC_F11,      KC_F12,  \
-  _______,  KC_BTN1,  KC_MS_U,  KC_BTN2,  _______,  KC_F16,   KC_F17,   _______,  KC_WH_U,  _______, AZERTY_MAC,  KC_PSCR,  \
-  _______,  KC_MS_L,  KC_MS_D,  KC_MS_R,  FRW_LBRC, KC_F18,   KC_F19,   FRW_RBRC, KC_WH_D,  _______, RESET,       DEBUG, \
+  _______,  _______,  KC_MS_U,  _______,  _______,  KC_F16,   KC_F17,   KC_BTN1,  KC_BTN2,  KC_WH_U, AZERTY_MAC,  KC_PSCR,  \
+  _______,  KC_MS_L,  KC_MS_D,  KC_MS_R,  FRW_LBRC, KC_F18,   KC_F19,   FRW_RBRC, _______,  KC_WH_D, RESET,       DEBUG, \
   MU_MOD,   MUV_DE,   MUV_IN,   MU_ON,    MU_OFF,   MI_ON,    MI_OFF,   AU_ON,    AU_OFF,   AG_NORM, AG_SWAP,     CN_MODE, \
   KC_LCTL,  _______,  _______,  KC_LALT,  _______,  _______,  _______,  _______,  _______,  _______, _______,     KC_SLEP  \
 )
